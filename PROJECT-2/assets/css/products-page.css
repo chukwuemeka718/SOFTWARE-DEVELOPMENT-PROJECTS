@@ -1,0 +1,261 @@
+/*=============== PRODUCTS PAGE CSS ===============*/
+
+/*==================== PRODUCTS HERO SECTION ====================*/
+.products__hero {
+  padding: 3rem 0;
+  text-align: center;
+  background: linear-gradient(135deg, var(--first-color) 0%, var(--first-color-alt) 100%);
+}
+
+.products__hero__title {
+  font-size: var(--biggest-font-size);
+  color: var(--white-color);
+  margin-bottom: 1rem;
+  font-family: var(--second-font);
+}
+
+.products__hero__subtitle {
+  font-size: var(--h2-font-size);
+  color: var(--white-color);
+  opacity: 0.95;
+}
+
+/*==================== PRODUCTS FILTER SECTION ====================*/
+.products__filter {
+  padding: 2rem 0;
+  background-color: var(--container-color);
+  position: sticky;
+  top: var(--header-height);
+  z-index: 50;
+  border-bottom: 2px solid var(--first-color);
+}
+
+.filter__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.filter__btn {
+  padding: 0.75rem 1.5rem;
+  border: 2px solid var(--first-color);
+  border-radius: 2rem;
+  background-color: var(--white-color);
+  color: var(--first-color);
+  font-weight: var(--font-semi-bold);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: var(--small-font-size);
+}
+
+.filter__btn:hover,
+.filter__btn--active {
+  background-color: var(--first-color);
+  color: var(--white-color);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(206, 18, 47, 0.3);
+}
+
+/*==================== CATEGORY TITLE ====================*/
+.category__title {
+  margin-bottom: 2rem;
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+/*==================== PRODUCTS GRID ====================*/
+.products__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+@media (width >= 640px) {
+  .products__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (width >= 968px) {
+  .products__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (width >= 1150px) {
+  .products__grid {
+    gap: 2.5rem;
+  }
+}
+
+/*==================== PRODUCT CARD ====================*/
+.product__card {
+  background-color: var(--container-color);
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.product__card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(206, 18, 47, 0.15);
+}
+
+.product__image {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  background-color: var(--body-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.product__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.product__card:hover .product__image img {
+  transform: scale(1.1);
+}
+
+.product__content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.product__name {
+  font-size: var(--h3-font-size);
+  color: var(--title-color);
+  margin-bottom: 0.5rem;
+  font-family: var(--body-font);
+  font-weight: var(--font-semi-bold);
+}
+
+.product__description {
+  font-size: var(--small-font-size);
+  color: var(--text-color);
+  margin-bottom: 1rem;
+  flex-grow: 1;
+  line-height: 1.5;
+}
+
+.product__price {
+  font-size: var(--h2-font-size);
+  color: var(--first-color);
+  font-weight: var(--font-bold);
+  margin-bottom: 1rem;
+  font-family: var(--second-font);
+}
+
+.product__button {
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+  font-size: var(--small-font-size);
+  font-weight: var(--font-semi-bold);
+}
+
+/*==================== PRODUCTS SECTION ====================*/
+.products__section {
+  padding: 2rem 0;
+}
+
+.products__section:nth-child(odd) {
+  background-color: var(--body-color);
+}
+
+.products__section:nth-child(even) {
+  background-color: var(--container-color);
+}
+
+/*==================== RESPONSIVE ADJUSTMENTS ====================*/
+@media (width < 640px) {
+  .products__hero {
+    padding: 2rem 1rem;
+  }
+
+  .products__hero__title {
+    font-size: var(--h1-font-size);
+  }
+
+  .products__hero__subtitle {
+    font-size: var(--normal-font-size);
+  }
+
+  .filter__buttons {
+    gap: 0.75rem;
+  }
+
+  .filter__btn {
+    padding: 0.5rem 1rem;
+    font-size: var(--smaller-font-size);
+  }
+
+  .product__image {
+    height: 200px;
+  }
+
+  .product__content {
+    padding: 1rem;
+  }
+
+  .category__title {
+    font-size: var(--h2-font-size);
+  }
+}
+
+/*==================== ANIMATION ====================*/
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.product__card {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.product__card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.product__card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.product__card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+/*==================== FILTER TRANSITIONS ====================*/
+.products__section {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.products__section.hidden {
+  display: none;
+  opacity: 0;
+}

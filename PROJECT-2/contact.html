@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Contact SLICE&SMILE bakery for custom cake orders, inquiries, and special requests. Get in touch with our team today."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--=============== FAVICON ===============-->
+    <link
+      rel="shortcut icon"
+      href="assets/img/favicon.png"
+      type="image/x-icon"
+    />
+
+    <!--=============== REMIXICONS - Insert link for icons ===============-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+    />
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/contact.css" />
+    <link rel="stylesheet" href="assets/css/footer.css" />
+
+    <title>Contact - SLICE&SMILE</title>
+  </head>
+  <body>
+    <!--==================== HEADER & NAV ====================-->
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="./index.html" class="nav__logo">
+          <img src="assets/img/logo.svg" alt="Logo" />
+          <span>SLICE&SMILE</span>
+        </a>
+
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li>
+              <a href="./index.html#home" class="nav__link">Home</a>
+            </li>
+
+            <li>
+              <a href="./index.html#about" class="nav__link">About Us</a>
+            </li>
+
+            <li>
+              <a href="./products.html" class="nav__link">Products</a>
+            </li>
+
+            <li>
+              <a href="./new.html" class="nav__link">New</a>
+            </li>
+
+            <li>
+              <a href="./contact.html" class="nav__link">Contact</a>
+            </li>
+          </ul>
+
+          <!-- CLOSE -->
+          <button class="nav__close" id="nav-close" aria-label="Close menu">
+            <i class="ri-close-large-line"></i>
+          </button>
+
+          <img src="assets/img/leaf-3.png" alt="" class="nav__img" />
+        </div>
+
+        <!-- Toggle -->
+        <button class="nav__toggle" id="nav-toggle" aria-label="Toglle menu">
+          <i class="ri-apps-2-line"></i>
+        </button>
+      </nav>
+    </header>
+
+    <!--==================== MAIN ====================-->
+    <main class="main">
+      <!--==================== CONTACT HERO SECTION ====================-->
+      <section class="contact__hero section">
+        <div class="container">
+          <h1 class="contact__hero__title">Get In Touch</h1>
+          <p class="contact__hero__subtitle">
+            Have questions about our cakes? Want to place a custom order? We'd
+            love to hear from you!
+          </p>
+        </div>
+      </section>
+
+      <!--==================== CONTACT INFO SECTION ====================-->
+      <section class="contact__info section">
+        <div class="container">
+          <div class="info__cards">
+            <div class="info__card">
+              <div class="info__icon">
+                <i class="ri-phone-line"></i>
+              </div>
+              <h3 class="info__title">Phone</h3>
+              <p class="info__text">+234 (816) 123-4567</p>
+              <p class="info__subtitle">Available Mon-Fri, 9AM-6PM WAT</p>
+            </div>
+
+            <div class="info__card">
+              <div class="info__icon">
+                <i class="ri-mail-line"></i>
+              </div>
+              <h3 class="info__title">Email</h3>
+              <p class="info__text">info@slicesmile.ng</p>
+              <p class="info__subtitle">We'll respond within 24 hours</p>
+            </div>
+
+            <div class="info__card">
+              <div class="info__icon">
+                <i class="ri-map-pin-line"></i>
+              </div>
+              <h3 class="info__title">Location</h3>
+              <p class="info__text">45 Lekki Phase 1</p>
+              <p class="info__subtitle">Lagos, Nigeria 106104</p>
+            </div>
+
+            <div class="info__card">
+              <div class="info__icon">
+                <i class="ri-time-line"></i>
+              </div>
+              <h3 class="info__title">Hours</h3>
+              <p class="info__text">Monday - Friday: 9AM - 6PM</p>
+              <p class="info__subtitle">Saturday - Sunday: 10AM - 5PM</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--==================== CONTACT FORM SECTION ====================-->
+      <section class="contact__form section">
+        <div class="container">
+          <div class="form__wrapper">
+            <div class="form__header">
+              <h2 class="form__title">Send us a Message</h2>
+              <p class="form__subtitle">
+                Fill out the form below and we'll get back to you soon
+              </p>
+            </div>
+
+            <form class="contact__form__element" id="contactForm">
+              <div class="form__group">
+                <label for="name" class="form__label">Full Name *</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  class="form__input"
+                  placeholder="Your full name"
+                  required
+                />
+              </div>
+
+              <div class="form__group">
+                <label for="email" class="form__label">Email Address *</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="form__input"
+                  placeholder="your.email@example.com"
+                  required
+                />
+              </div>
+
+              <div class="form__group">
+                <label for="phone" class="form__label">Phone Number</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  class="form__input"
+                  placeholder="+1 (555) 123-4567"
+                />
+              </div>
+
+              <div class="form__group">
+                <label for="subject" class="form__label">Subject *</label>
+                <select
+                  id="subject"
+                  name="subject"
+                  class="form__input"
+                  required
+                >
+                  <option value="">Select a subject</option>
+                  <option value="order">Custom Cake Order</option>
+                  <option value="inquiry">General Inquiry</option>
+                  <option value="event">Event Catering</option>
+                  <option value="wholesale">Wholesale Inquiry</option>
+                  <option value="feedback">Feedback</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <div class="form__group">
+                <label for="event-date" class="form__label"
+                  >Event Date (if applicable)</label
+                >
+                <input
+                  type="date"
+                  id="event-date"
+                  name="eventDate"
+                  class="form__input"
+                />
+              </div>
+
+              <div class="form__group form__group--full">
+                <label for="message" class="form__label">Message *</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  class="form__textarea"
+                  placeholder="Tell us about your order or inquiry..."
+                  rows="6"
+                  required
+                ></textarea>
+              </div>
+
+              <div class="form__group form__group--full">
+                <label for="preferences" class="form__label"
+                  >Special Preferences</label
+                >
+                <textarea
+                  id="preferences"
+                  name="preferences"
+                  class="form__textarea"
+                  placeholder="Any dietary restrictions, design preferences, or special requests?"
+                  rows="4"
+                ></textarea>
+              </div>
+
+              <div class="form__group form__group--full form__checkbox">
+                <input
+                  type="checkbox"
+                  id="newsletter"
+                  name="newsletter"
+                  class="form__check"
+                />
+                <label for="newsletter" class="form__check-label">
+                  Subscribe to our newsletter for special offers and new
+                  creations
+                </label>
+              </div>
+
+              <button type="submit" class="button form__button">
+                Send Message
+              </button>
+              <p class="form__note">* Required fields</p>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!--==================== FAQ SECTION ====================-->
+      <section class="faq section">
+        <div class="container">
+          <h2 class="section__title">Frequently Asked Questions</h2>
+
+          <div class="faq__container">
+            <div class="faq__item">
+              <button class="faq__header">
+                <span
+                  >How much advance notice do you need for custom orders?</span
+                >
+                <i class="ri-add-line faq__icon"></i>
+              </button>
+              <div class="faq__content">
+                <p>
+                  We recommend at least 3-5 days advance notice for custom
+                  orders. However, rush orders may be possible depending on
+                  availability. Contact us to discuss your timeline!
+                </p>
+              </div>
+            </div>
+
+            <div class="faq__item">
+              <button class="faq__header">
+                <span>Do you offer vegan or gluten-free options?</span>
+                <i class="ri-add-line faq__icon"></i>
+              </button>
+              <div class="faq__content">
+                <p>
+                  Yes! We offer vegan and gluten-free cake options. Please
+                  mention your dietary requirements when placing your order, and
+                  we'll create a delicious cake tailored to your needs.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq__item">
+              <button class="faq__header">
+                <span>What is your delivery area?</span>
+                <i class="ri-add-line faq__icon"></i>
+              </button>
+              <div class="faq__content">
+                <p>
+                  We offer delivery within a 15-mile radius of our location. For
+                  deliveries outside this area or large events, please contact
+                  us to arrange special delivery options.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq__item">
+              <button class="faq__header">
+                <span>Can I customize the design and flavor of my cake?</span>
+                <i class="ri-add-line faq__icon"></i>
+              </button>
+              <div class="faq__content">
+                <p>
+                  Absolutely! We specialize in custom cakes. Choose your
+                  flavors, filling, frosting, design, and decorations. Our team
+                  will work with you to bring your vision to life.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq__item">
+              <button class="faq__header">
+                <span>What is your cancellation or modification policy?</span>
+                <i class="ri-add-line faq__icon"></i>
+              </button>
+              <div class="faq__content">
+                <p>
+                  Orders can be modified or cancelled up to 48 hours before the
+                  delivery/pickup date without charge. Cancellations within 48
+                  hours may incur a 25% fee.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__container">
+          <!-- About Section -->
+          <div class="footer__section">
+            <div class="footer__logo">
+              <img src="assets/img/logo.svg" alt="Logo" />
+              <span>SLICE&SMILE</span>
+            </div>
+            <p
+              style="
+                font-size: var(--small-font-size);
+                margin-top: 1rem;
+                line-height: 1.6;
+              "
+            >
+              Crafting handmade cakes with love, premium ingredients, and a
+              touch of magic. Your celebrations deserve to be sweet!
+            </p>
+            <div class="footer__socials">
+              <a href="#" class="footer__social" aria-label="Facebook">
+                <i class="ri-facebook-line"></i>
+              </a>
+              <a href="#" class="footer__social" aria-label="Instagram">
+                <i class="ri-instagram-line"></i>
+              </a>
+              <a href="#" class="footer__social" aria-label="Twitter">
+                <i class="ri-twitter-line"></i>
+              </a>
+              <a href="#" class="footer__social" aria-label="WhatsApp">
+                <i class="ri-whatsapp-line"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="footer__section">
+            <h3>Quick Links</h3>
+            <ul class="footer__links">
+              <li><a href="./index.html" class="footer__link">Home</a></li>
+              <li>
+                <a href="./products.html" class="footer__link">Our Products</a>
+              </li>
+              <li>
+                <a href="./new.html" class="footer__link">New Creations</a>
+              </li>
+              <li>
+                <a href="./contact.html" class="footer__link">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="footer__section">
+            <h3>Contact Info</h3>
+            <div class="footer__info">
+              <p>
+                <strong><i class="ri-phone-line"></i> Call Us</strong>
+                +234 (816) 123-4567
+              </p>
+              <p>
+                <strong><i class="ri-mail-line"></i> Email</strong>
+                info@slicesmile.ng
+              </p>
+              <p>
+                <strong><i class="ri-map-pin-line"></i> Visit Us</strong>
+                45 Lekki Phase 1, Lagos, Nigeria
+              </p>
+            </div>
+          </div>
+
+          <!-- Business Hours -->
+          <div class="footer__section">
+            <h3>Business Hours</h3>
+            <div class="footer__info">
+              <p>
+                <strong>Weekdays</strong>
+                Monday - Friday<br />
+                9:00 AM - 6:00 PM WAT
+              </p>
+              <p>
+                <strong>Weekends</strong>
+                Saturday - Sunday<br />
+                10:00 AM - 5:00 PM WAT
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__divider"></div>
+
+        <div class="footer__bottom">
+          <p class="footer__copyright">
+            &copy; 2026 SLICE&SMILE Bakery. All rights reserved.
+          </p>
+          <p
+            style="
+              font-size: var(--smaller-font-size);
+              color: var(--white-color);
+            "
+          >
+            Owned by <strong>Ezeogu Chukwuemeka</strong> | Lagos, Nigeria
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!--=============== SCROLLREVEAL - Insert link for animations ===============-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/contact.js"></script>
+  </body>
+</html>

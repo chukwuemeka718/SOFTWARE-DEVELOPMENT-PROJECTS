@@ -1,0 +1,625 @@
+/*=============== GOOGLE FONTS - Insert link for typography ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3.5rem;
+
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --first-color: hsl(350, 70%, 65%);
+  --first-color-alt: hsl(350, 70%, 62%);
+  --second-color: hsl(350, 40%, 20%);
+  --title-color: hsl(350, 28%, 15%);
+  --text-color: hsl(350, 25%, 28%);
+  --white-color: hsl(0, 0%, 100%);
+  --body-color: hsl(350, 95%, 90%);
+  --container-color: hsl(350, 100%, 97%);
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Montserrat", sans-serif;
+  --second-font: "Pacifico", cursive;
+  --biggest-font-size: 3rem;
+  --bigger-font-size: 2rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+
+  /*========== Font weight ==========*/
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  --font-bold: 700;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+/*========== Responsive typography ==========*/
+@media (width >= 1150px) {
+  :root {
+    --biggest-font-size: 5rem;
+    --bigger-font-size: 4rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  }
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+input,
+button {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+body {
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+input,
+button {
+  background: none;
+  border: none;
+  outline: none;
+}
+
+h1, h2, h3, h4 {
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+  font-family: var(--second-font);
+  line-height: 120%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.container {
+  max-width: 1120px;
+  margin-inline: 1rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.section {
+  padding-block: 5rem 1rem;
+}
+.section__title {
+  text-align: center;
+  font-size: var(--bigger-font-size);
+  margin-bottom: 1.5rem;
+}
+
+.main {
+  overflow: hidden;
+}
+
+/*=============== HEADER & NAV ===============*/
+.header{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: var(--body-color);
+  z-index: var(--z-fixed);
+  transition: box-shadow .4s;
+}
+
+.nav{
+  position: relative;
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__logo{
+  display: flex;
+  align-items: center;
+  column-gap: .5rem;
+}
+
+.nav__logo img{
+  width: 1.5rem;
+}
+
+.nav__logo span{
+  font-family: var(--second-font);
+  font-size: var(--h3-font-size);
+  color: var(--title-color);
+}
+
+.nav__toggle{
+  color: var(--title-color);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+
+/* Navigation for mobile devices <> */
+@media(width <=1150px){
+  .nav__menu{
+    position: fixed;
+    top: 0;
+    right: -120%;
+    background-color: var(--body-color);
+    width: 80%;
+    height: 100%;
+    box-shadow: -2px 0 16px hsla(350, 70%, 20%, .1);
+    padding: 7rem 0 2rem 2rem;
+    z-index: var(--z-fixed);
+    transition: right .4s;
+  }
+}
+
+.nav__list{
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.5rem;
+}
+
+.nav__link{
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+  transition: color .4s;
+}
+
+.nav__link:hover{
+  color: var(--first-color);
+}
+
+.nav__close{
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: var(--title-color);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.nav__img{
+  position: absolute;
+  width: 100px;
+  right: 1.5rem;
+  bottom: 1.5rem;
+}
+
+
+/* Show menu */
+.show-menu{
+  right: 0;
+}
+
+
+/* Change header styles */
+.scroll_header{
+  box-shadow: 0 2px 16px hsla(350, 70%, 20%, .1);
+}
+
+
+/* Active link */
+
+
+/*=============== HOME SECTION ===============*/
+.home__container{
+  padding-block: 2.5rem;
+  row-gap: 3rem;
+}
+
+.home__data{
+  position: relative;
+  text-align: center;
+}
+
+.home__title{
+  font-size: var(--bigger-font-size);
+  margin-bottom: 1rem;
+}
+
+.home__title span{
+  display: block;
+  color: var(--first-color);
+}
+
+.home__description{
+  margin-bottom: 2rem;
+}
+
+.home__data img{
+  position: absolute;
+  z-index: -1;
+}
+
+.home__slice-1{
+  width: 50px;
+  left: -2rem;
+  top: -2rem;
+}
+
+.home__slice-2{
+  width: 80px;
+  right: -2rem;
+  bottom: -2.5rem;
+  filter: blur(2px);
+}
+
+.home__balloons{
+  width: 80px;
+  top: -3.5rem;
+  right: 1rem;
+}
+
+ .home__sticker-1{
+  width: 30px;
+  top: 2.5rem;
+  right: -.5rem;
+}
+
+.home__sticker-2{
+  width: 30px;
+  left: 1rem;
+  bottom: 2rem;
+}  
+
+.home__images{
+  height: 372px;
+  width: 340px;
+  position: relative;
+  display: grid;
+  justify-self: center;
+}
+
+.home__images img{
+  position: absolute;
+}
+
+.home__swiper .home__cake{
+  position: initial;
+  width: 300px;
+  margin-inline: auto;
+}
+
+.home__blob{
+  width: 300px;
+  top: -1.5rem;
+  justify-self: center;
+  z-index: -1;
+}
+
+.home__base{
+  width: 340px;
+  bottom: 0;
+  justify-self: center;
+  z-index: -1;
+}
+
+.home__leaf-1{
+  width: 40px;
+  bottom: 3rem;
+  right: 4.5rem;
+}
+
+.home__leaf-2{
+  width: 50px;
+  top: .5rem;
+  left: .5rem;
+}
+
+.home__sticker-3{
+  width: 30px;
+  left: 5rem;
+  bottom: 6.5rem;
+}
+
+.home__sticker-4{
+  width: 30px;
+  right: 1.25rem;
+  top: 6rem;
+}
+
+
+/* Swiper class */
+.home__swiper{
+  width: 100%;
+  height: 100%;
+}
+
+
+/*=============== BUTTON ===============*/
+.button{
+  display: inline-flex;
+  background-color: var(--first-color);
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+  padding: 1rem 2rem;
+  border-radius: 4rem;
+  transition: background-color .4s, box-shadpw .4s;
+  margin-bottom: 2rem;
+}
+
+.button:hover{
+  background-color: var(--first-color-alt);
+  box-shadow: 0 4px 24px hsla(350, 70%, 65%, .5);
+}
+
+
+/*=============== ABOUT SECTION ===============*/
+.about{
+  position: relative;
+  background-color: var(--second-color);
+  overflow: hidden;
+}
+
+.about__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  column-gap: 4rem;
+}
+
+.about__cupcake-1{
+  position: absolute;
+  width: 80px;
+  top: 1.5em;
+  right: 1.5em;
+  rotate: -135deg;
+}
+
+.about__cupcake-2{
+  position: absolute;
+  width: 80px;
+  left: 1.5em;
+  bottom: 1.5em;
+  rotate: 30deg;
+  z-index: 1;
+}
+
+.about__data{
+  position: relative;
+  text-align: center;
+}
+
+.about__data .section__title{
+  color: var(--white-color);
+}
+
+.about__description{
+  color: var(--white-color);
+  margin-bottom: 2rem;
+}
+
+.about__sticker-1{
+  position: absolute;
+  width: 30px;
+  top: 3.5rem;
+  left: 2rem;
+}
+
+.about__sticker-2{
+  position: absolute;
+  width: 30px;
+  right: 3.5rem;
+  bottom: 2rem;
+}
+
+.about__images{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: grid;
+}
+
+.about__blob{
+  width: 360px;
+  justify-self: center;
+}
+
+.about__img .about__leaf .about__cupcake-3{
+  position: absolute;
+}
+
+.about__cupcake-3{
+  width: 50px;
+  right: 3.5rem;
+  bottom: 0;
+  rotate: -15deg;
+  filter: blur(2px);
+}
+
+
+/*=============== PRODUCTS SECTION ===============*/
+
+
+/* Swiper class */
+
+
+/*=============== NEW SECTION ===============*/
+
+
+/* Swiper class */
+
+
+/*=============== CONTACT SECTION ===============*/
+
+
+/*=============== FOOTER ===============*/
+
+
+/*=============== SCROLL BAR ===============*/
+
+
+/*=============== SCROLL UP ===============*/
+
+
+/* Show Scroll Up */
+
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices <> */
+@media(width <=360px){
+  .home__images{
+    width: 250px;
+    height: 290px;
+  }
+}
+
+
+/* For medium devices <> */
+@media(width >=540px){
+  .home__container{
+    grid-template-columns: 400px;
+    justify-content: center;
+  }
+}
+
+
+/* For large devices <> */
+@media (width >= 1150px){
+  .container{
+    margin-inline: auto;
+  }
+
+  .section{
+    padding-block: 7rem 2rem;
+  }
+
+  .nav{
+    height: calc(var(--header-height) + 2rem);
+  }
+  .nav__toggle,
+  .nav__close,
+  .nav__img{
+    display:none
+  }
+
+  .nav__list{
+    flex-direction: row;
+    column-gap: 4rem;
+  }
+
+  .home__container{
+    display: grid;
+    grid-template-columns: 475px 550px;
+    column-gap: 6rem;
+    align-items: center;
+    padding-block: 6rem 1rem;
+  }
+
+  .home__data{
+    text-align: initial;
+    margin-bottom: 1.5rem;
+  }
+
+  .home__description{
+    margin-bottom: 4rem;
+  }
+
+  .home__slice-1{
+    width: 70px;
+    left: -6rem;
+    top: -3rem;
+  }
+
+  .home__slice-2{
+    width: 90px;
+    right: 6rem;
+    bottom: -5rem;
+  }
+
+  .home__balloons{
+    width: 140px;
+    top: -7rem;
+    right: -1rem;
+  }
+
+  .home__sticker-1{
+    width: 40px;
+    top: 4rem;
+    right: -1.5rem;
+  }
+
+  .home__sticker-2{
+    width: 40px;
+    left: -4rem;
+    bottom: 4rem;
+  }
+
+  .home__images{
+    width: 550px;
+    height: 640px;
+  }
+
+  .home__blob{
+    width: 485px;
+    top: -2.5rem;
+  }
+
+  .home__base{
+    width: 550px;
+    bottom: 3rem;
+  }
+
+  .home__swiper .home__cake{
+    width: 485px;
+  }
+
+  .home__leaf-1{
+    width: 55px;
+    bottom: 8rem;
+    right: 8rem;
+  }
+
+  .home__leaf-2{
+    width: 75px;
+    top: 3rem;
+  }
+
+  .home__sticker-3{
+    width: 40px;
+    left: 8rem;
+    bottom: 13rem;
+  }
+
+  .home__sticker-4{
+    width: 40px;
+    top: 10rem;
+  }
+} 
+
+
+/* For 2K resolutions <> */

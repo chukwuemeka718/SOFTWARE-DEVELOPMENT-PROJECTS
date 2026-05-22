@@ -1,0 +1,549 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Browse our complete selection of handcrafted cakes, pastries, and gourmet desserts. Discover premium custom cakes for every occasion."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--=============== FAVICON ===============-->
+    <link
+      rel="shortcut icon"
+      href="assets/img/favicon.png"
+      type="image/x-icon"
+    />
+
+    <!--=============== REMIXICONS - Insert link for icons ===============-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+    />
+
+    <!--=============== SWIPER CSS - Insert link for swiperjs ===============-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/products-page.css" />
+    <link rel="stylesheet" href="assets/css/footer.css" />
+
+    <title>Products - SLICE&SMILE</title>
+  </head>
+  <body>
+    <!--==================== HEADER & NAV ====================-->
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="./index.html" class="nav__logo">
+          <img src="assets/img/logo.svg" alt="Logo" />
+          <span>SLICE&SMILE</span>
+        </a>
+
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li>
+              <a href="./index.html#home" class="nav__link">Home</a>
+            </li>
+
+            <li>
+              <a href="./index.html#about" class="nav__link">About Us</a>
+            </li>
+
+            <li>
+              <a href="./products.html" class="nav__link">Products</a>
+            </li>
+
+            <li>
+              <a href="./new.html" class="nav__link">New</a>
+            </li>
+
+            <li>
+              <a href="./contact.html" class="nav__link">Contact</a>
+            </li>
+          </ul>
+
+          <!-- CLOSE -->
+          <button class="nav__close" id="nav-close" aria-label="Close menu">
+            <i class="ri-close-large-line"></i>
+          </button>
+
+          <img src="assets/img/leaf-3.png" alt="" class="nav__img" />
+        </div>
+
+        <!-- Toggle -->
+        <button class="nav__toggle" id="nav-toggle" aria-label="Toglle menu">
+          <i class="ri-apps-2-line"></i>
+        </button>
+      </nav>
+    </header>
+
+    <!--==================== MAIN ====================-->
+    <main class="main">
+      <!--==================== PRODUCTS HERO SECTION ====================-->
+      <section class="products__hero section">
+        <div class="container">
+          <h1 class="products__hero__title">Our Products</h1>
+          <p class="products__hero__subtitle">
+            Discover our complete collection of handcrafted cakes, pastries, and
+            gourmet desserts
+          </p>
+        </div>
+      </section>
+
+      <!--==================== PRODUCTS FILTER SECTION ====================-->
+      <section class="products__filter section">
+        <div class="container">
+          <div class="filter__buttons">
+            <button class="filter__btn filter__btn--active" data-filter="all">
+              All Products
+            </button>
+            <button class="filter__btn" data-filter="strawberry">
+              <i class="ri-cake-2-line"></i> Strawberry
+            </button>
+            <button class="filter__btn" data-filter="vanilla">
+              <i class="ri-cake-2-line"></i> Vanilla
+            </button>
+            <button class="filter__btn" data-filter="chocolate">
+              <i class="ri-cake-2-line"></i> Chocolate
+            </button>
+            <button class="filter__btn" data-filter="driedfruit">
+              <i class="ri-cake-2-line"></i> Dried Fruit
+            </button>
+            <button class="filter__btn" data-filter="others">
+              <i class="ri-cake-2-line"></i> Others
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!--==================== STRAWBERRY PRODUCTS ====================-->
+      <section class="products__section section" data-category="strawberry">
+        <div class="container">
+          <h2 class="section__title category__title">Strawberry Delights</h2>
+          <div class="products__grid">
+            <article class="product__card" data-product="strawberry">
+              <div class="product__image">
+                <img
+                  src="assets/img/product-strawberry-1.png"
+                  alt="Strawberry Shortcake"
+                />
+              </div>
+              <div class="product__content">
+                <h3 class="product__name">Strawberry Shortcake</h3>
+                <p class="product__description">
+                  Fluffy sponge cake topped with fresh strawberries and whipped
+                  cream
+                </p>
+                <p class="product__price">$15.99</p>
+                <button class="button product__button">Order Now</button>
+              </div>
+            </article>
+
+            <article class="product__card" data-product="strawberry">
+              <div class="product__image">
+                <img
+                  src="assets/img/product-strawberry-2.png"
+                  alt="Fresh Strawberry Cream"
+                />
+              </div>
+              <div class="product__content">
+                <h3 class="product__name">Fresh Strawberry Cream</h3>
+                <p class="product__description">
+                  Decadent strawberry cake with smooth cream filling and fresh
+                  berries
+                </p>
+                <p class="product__price">$15.99</p>
+                <button class="button product__button">Order Now</button>
+              </div>
+            </article>
+
+            <article class="product__card" data-product="strawberry">
+              <div class="product__image">
+                <img
+                  src="assets/img/product-strawberry-3.png"
+                  alt="Strawberry Delight Cake"
+                />
+              </div>
+              <div class="product__content">
+                <h3 class="product__name">Strawberry Delight Cake</h3>
+                <p class="product__description">
+                  Premium strawberry cake with layers of vanilla cream and fresh
+                  toppings
+                </p>
+                <p class="product__price">$15.99</p>
+                <button class="button product__button">Order Now</button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!--==================== VANILLA PRODUCTS ====================-->
+      <section class="products__section section" data-category="vanilla">
+        <div class="container">
+          <h2 class="section__title category__title">Vanilla Creations</h2>
+          <div class="products__grid">
+            <article class="product__card" data-product="vanilla">
+              <div class="product__image">
+                <img
+                  src="assets/img/product-vanilla-1.png"
+                  alt="Classic Vanilla Bean Cake"
+                />
+              </div>
+              <div class="product__content">
+                <h3 class="product__name">Classic Vanilla Bean Cake</h3>
+                <p class="product__description">
+                  Timeless vanilla cake made with Madagascar vanilla beans and
+                  premium ingredients
+                </p>
+                <p class="product__price">$15.99</p>
+                <button class="button product__button">Order Now</button>
+              </div>
+            </article>
+
+            <article class="product__card" data-product="vanilla">
+              <div class="product__image">
+                <img
+                  src="assets/img/product-vanilla-2.png"
+                  alt="Vanilla Buttercream Cake"
+                />
+              </div>
+              <div class="product__content">
+                <h3 class="product__name">Vanilla Buttercream Cake</h3>
+                <p class="product__description">
+                  Elegant vanilla sponge with rich buttercream frosting and
+                  decorative details
+                </p>
+                <p class="product__price">$15.99</p>
+                <button class="button product__button">Order Now</button>
+              </div>
+            </article>
+
+            <article class="product__card" data-product="vanilla">
+              <div class="product__image">
+                <img
+                  src="assets/img/product-vanilla-3.png"
+                  alt="Soft Vanilla Sponge Cake"
+                />
+              </div>
+              <div class="product__content">
+                <h3 class="product__name">Soft Vanilla Sponge Cake</h3>
+                <p class="product__description">
+                  Light and fluffy vanilla sponge cake, perfect for any
+                  celebration
+                </p>
+                <p class="product__price">$15.99</p>
+                <button class="button product__button">Order Now</button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!--==================== CHOCOLATE PRODUCTS ====================-->
+      <section class="products__section section" data-category="chocolate">
+        <div class="container">
+          <h2 class="section__title category__title">Chocolate Indulgence</h2>
+          <div class="products__grid">
+            <article class="product__card" data-product="chocolate">
+              <div class="product__image">
+                <img
+                  src="assets/img/product-chocolate-1.png"
+                  alt="Chocolate Fudge Cake"
+                />
+              </div>
+              <div class="product__content">
+                <h3 class="product__name">Chocolate Fudge Cake</h3>
+                <p class="product__description">
+                  Rich dark chocolate cake with a creamy fudge center and
+                  ganache topping
+                </p>
+                <p class="product__price">$15.99</p>
+                <button class="button product__button">Order Now</button>
+              </div>
+            </article>
+
+            <article class="product__card" data-product="chocolate">
+              <div class="product__image">
+                <img
+                  src="assets/img/product-chocolate-2.png"
+                  alt="Dark Chocolate Velvet Cake"
+                />
+              </div>
+              <div class="product__content">
+                <h3 class="product__name">Dark Chocolate Velvet Cake</h3>
+                <p class="product__description">
+                  Luxurious dark chocolate cake with silky smooth velvet texture
+                </p>
+                <p class="product__price">$15.99</p>
+                <button class="button product__button">Order Now</button>
+              </div>
+            </article>
+
+            <article class="product__card" data-product="chocolate">
+              <div class="product__image">
+                <img
+                  src="assets/img/product-chocolate-3.png"
+                  alt="Triple Chocolate Cake"
+                />
+              </div>
+              <div class="product__content">
+                <h3 class="product__name">Triple Chocolate Cake</h3>
+                <p class="product__description">
+                  Three layers of different chocolate delights in one
+                  spectacular cake
+                </p>
+                <p class="product__price">$15.99</p>
+                <button class="button product__button">Order Now</button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!--==================== DRIED FRUIT PRODUCTS ====================-->
+      <section class="products__section section" data-category="driedfruit">
+        <div class="container">
+          <h2 class="section__title category__title">Nutty & Fruity</h2>
+          <div class="products__grid">
+            <article class="product__card" data-product="driedfruit">
+              <div class="product__image">
+                <img
+                  src="assets/img/product-dried-fruit-1.png"
+                  alt="Peanut And Banana Cake"
+                />
+              </div>
+              <div class="product__content">
+                <h3 class="product__name">Peanut And Banana Cake</h3>
+                <p class="product__description">
+                  Smooth banana cake with creamy peanut frosting and roasted
+                  peanuts
+                </p>
+                <p class="product__price">$15.99</p>
+                <button class="button product__button">Order Now</button>
+              </div>
+            </article>
+
+            <article class="product__card" data-product="driedfruit">
+              <div class="product__image">
+                <img
+                  src="assets/img/product-dried-fruit-2.png"
+                  alt="Filled Walnut Cake"
+                />
+              </div>
+              <div class="product__content">
+                <h3 class="product__name">Filled Walnut Cake</h3>
+                <p class="product__description">
+                  Moist cake with walnut crunch filling and premium walnut
+                  topping
+                </p>
+                <p class="product__price">$15.99</p>
+                <button class="button product__button">Order Now</button>
+              </div>
+            </article>
+
+            <article class="product__card" data-product="driedfruit">
+              <div class="product__image">
+                <img
+                  src="assets/img/product-dried-fruit-3.png"
+                  alt="Glazed Pecan Cake"
+                />
+              </div>
+              <div class="product__content">
+                <h3 class="product__name">Glazed Pecan Cake</h3>
+                <p class="product__description">
+                  Buttery pecan cake with glazed caramel drizzle and whole
+                  pecans
+                </p>
+                <p class="product__price">$15.99</p>
+                <button class="button product__button">Order Now</button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!--==================== OTHER PRODUCTS ====================-->
+      <section class="products__section section" data-category="others">
+        <div class="container">
+          <h2 class="section__title category__title">Other Favorites</h2>
+          <div class="products__grid">
+            <article class="product__card" data-product="others">
+              <div class="product__image">
+                <img
+                  src="assets/img/product-others-1.png"
+                  alt="Chocolate Brownie"
+                />
+              </div>
+              <div class="product__content">
+                <h3 class="product__name">Chocolate Brownie</h3>
+                <p class="product__description">
+                  Dense, fudgy chocolate brownies with a chewy center and crispy
+                  edges
+                </p>
+                <p class="product__price">$15.99</p>
+                <button class="button product__button">Order Now</button>
+              </div>
+            </article>
+
+            <article class="product__card" data-product="others">
+              <div class="product__image">
+                <img
+                  src="assets/img/product-others-2.png"
+                  alt="Cream Cupcake"
+                />
+              </div>
+              <div class="product__content">
+                <h3 class="product__name">Cream Cupcake</h3>
+                <p class="product__description">
+                  Individual-sized cupcakes with creamy frosting and gourmet
+                  toppings
+                </p>
+                <p class="product__price">$15.99</p>
+                <button class="button product__button">Order Now</button>
+              </div>
+            </article>
+
+            <article class="product__card" data-product="others">
+              <div class="product__image">
+                <img src="assets/img/product-others-3.png" alt="Lemon Cake" />
+              </div>
+              <div class="product__content">
+                <h3 class="product__name">Lemon Cake</h3>
+                <p class="product__description">
+                  Fresh citrus lemon cake with tangy glaze and zesty lemon
+                  flavor
+                </p>
+                <p class="product__price">$15.99</p>
+                <button class="button product__button">Order Now</button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__container">
+          <!-- About Section -->
+          <div class="footer__section">
+            <div class="footer__logo">
+              <img src="assets/img/logo.svg" alt="Logo" />
+              <span>SLICE&SMILE</span>
+            </div>
+            <p
+              style="
+                font-size: var(--small-font-size);
+                margin-top: 1rem;
+                line-height: 1.6;
+              "
+            >
+              Crafting handmade cakes with love, premium ingredients, and a
+              touch of magic. Your celebrations deserve to be sweet!
+            </p>
+            <div class="footer__socials">
+              <a href="#" class="footer__social" aria-label="Facebook">
+                <i class="ri-facebook-line"></i>
+              </a>
+              <a href="#" class="footer__social" aria-label="Instagram">
+                <i class="ri-instagram-line"></i>
+              </a>
+              <a href="#" class="footer__social" aria-label="Twitter">
+                <i class="ri-twitter-line"></i>
+              </a>
+              <a href="#" class="footer__social" aria-label="WhatsApp">
+                <i class="ri-whatsapp-line"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="footer__section">
+            <h3>Quick Links</h3>
+            <ul class="footer__links">
+              <li><a href="./index.html" class="footer__link">Home</a></li>
+              <li>
+                <a href="./products.html" class="footer__link">Our Products</a>
+              </li>
+              <li>
+                <a href="./new.html" class="footer__link">New Creations</a>
+              </li>
+              <li>
+                <a href="./contact.html" class="footer__link">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="footer__section">
+            <h3>Contact Info</h3>
+            <div class="footer__info">
+              <p>
+                <strong><i class="ri-phone-line"></i> Call Us</strong>
+                +234 (816) 123-4567
+              </p>
+              <p>
+                <strong><i class="ri-mail-line"></i> Email</strong>
+                info@slicesmile.ng
+              </p>
+              <p>
+                <strong><i class="ri-map-pin-line"></i> Visit Us</strong>
+                45 Lekki Phase 1, Lagos, Nigeria
+              </p>
+            </div>
+          </div>
+
+          <!-- Business Hours -->
+          <div class="footer__section">
+            <h3>Business Hours</h3>
+            <div class="footer__info">
+              <p>
+                <strong>Weekdays</strong>
+                Monday - Friday<br />
+                9:00 AM - 6:00 PM WAT
+              </p>
+              <p>
+                <strong>Weekends</strong>
+                Saturday - Sunday<br />
+                10:00 AM - 5:00 PM WAT
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__divider"></div>
+
+        <div class="footer__bottom">
+          <p class="footer__copyright">
+            &copy; 2026 SLICE&SMILE Bakery. All rights reserved.
+          </p>
+          <p
+            style="
+              font-size: var(--smaller-font-size);
+              color: var(--white-color);
+            "
+          >
+            Owned by <strong>Ezeogu Chukwuemeka</strong> | Lagos, Nigeria
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!--=============== SCROLLREVEAL - Insert link for animations ===============-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.min.js"></script>
+
+    <!--=============== SWIPER JS - Insert link for swiperjs ===============-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/products.js"></script>
+  </body>
+</html>
