@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project 4 — User Management System</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <div class="header-inner">
+        <div class="logo">
+          <span class="logo-bracket">{</span>
+          <span class="logo-text">PROJECT<em>4</em></span>
+          <span class="logo-bracket">}</span>
+        </div>
+
+        <div class="header-meta">
+          <span class="tag">Node.js</span>
+          <span class="tag">SQLite</span>
+          <span class="tag">REST API</span>
+        </div>
+      </div>
+
+      <div class="section-header">
+        <div class="section-label">PROJECT DASHBOARD</div>
+        <h2 class="section-title">User Management System</h2>
+      </div>
+    </header>
+
+    <!-- MAIN -->
+    <main class="main">
+
+      <!-- STATUS BAR -->
+      <div class="status-bar">
+        <div class="status-dot" id="statusDot"></div>
+        <span id="statusText">Connecting to server...</span>
+        <span class="status-url">http://localhost:3000</span>
+      </div>
+
+      <!-- FORM SECTION -->
+      <section class="section">
+        <div class="section-label">01 — CREATE / UPDATE</div>
+
+        <div class="form-card">
+          <input type="hidden" id="userId" />
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" placeholder="e.g. Amara Okafor" autocomplete="off"/>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" placeholder="e.g. amara@email.com" autocomplete="off"/>
+            </div>
+
+            <div class="form-group">
+              <label for="role">Role</label>
+              <select id="role">
+                <option value="user">User</option>
+                <option value="admin">Admin</option>
+                <option value="editor">Editor</option>
+                <option value="viewer">Viewer</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button class="btn btn-primary" id="saveBtn" onclick="saveUser()">
+              <span class="btn-icon">+</span> Add User
+            </button>
+
+            <button class="btn btn-ghost" id="cancelBtn" onclick="resetForm()" style="display:none">
+              Cancel
+            </button>
+          </div>
+
+          <div id="formMsg" class="form-msg"></div>
+        </div>
+      </section>
+
+      <!-- SEARCH -->
+      <section class="section">
+        <div class="section-label">02 — SEARCH USERS</div>
+
+        <div class="search-bar">
+          <span class="search-icon">⌕</span>
+
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search by name or email..."
+            oninput="searchUsers()"
+          />
+
+          <span class="results-count" id="resultsCount"></span>
+        </div>
+      </section>
+
+      <!-- TABLE -->
+      <section class="section">
+        <div class="section-label">03 — USER RECORDS</div>
+
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>#ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Role</th>
+                <th>Created</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+
+            <tbody id="userTableBody">
+              <tr class="empty-row">
+                <td colspan="6">Loading records...</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- STATS -->
+      <section class="section stats-section">
+        <div class="section-label">04 — STATISTICS</div>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-num" id="statTotal">—</div>
+            <div class="stat-label">Total Users</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-num" id="statAdmins">—</div>
+            <div class="stat-label">Admins</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-num" id="statEditors">—</div>
+            <div class="stat-label">Editors</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-num" id="statLatest">—</div>
+            <div class="stat-label">Latest Added</div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- DELETE MODAL -->
+    <div class="modal-overlay" id="deleteModal">
+      <div class="modal">
+        <div class="modal-icon">⚠</div>
+        <h3>Delete User?</h3>
+        <p>This action is permanent and cannot be undone.</p>
+
+        <div class="modal-actions">
+          <button class="btn btn-danger" id="confirmDeleteBtn">Delete</button>
+          <button class="btn btn-ghost" onclick="closeModal()">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <span>SOFTWARE-DEVELOPMENT-PROJECTS / <strong>PROJECT-4</strong></span>
+      <span>Node.js · Express · SQLite · Vanilla JS</span>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
